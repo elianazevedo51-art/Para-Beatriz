@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para o Amor da Minha Vida</title>
+<style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+        body {
+
+            margin: 0;
+
+            padding: 20px;
+
+            background-color: #fdf5f5;
+
+            font-family: 'Montserrat', sans-serif;
+
+            color: #5a3e36;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            min-height: 100vh;
+
+        }
+
+        .container {
+
+            max-width: 400px;
+
+            width: 100%;
+
+            text-align: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            height: 100%;
+
+        }
+
+        h1 {
+
+            font-family: 'Caveat', cursive;
+
+            color: #b84a62;
+
+            font-size: 3.2rem;
+
+            margin: 10px 0 5px 0;
+
+            line-height: 1.2;
+
+        }
+
+        .content-wrapper {
+
+            background-color: #ffffff;
+
+            border-radius: 20px;
+
+            padding: 20px;
+
+            box-shadow: 0 8px 24px rgba(184, 74, 98, 0.1);
+
+            margin: 15px 0;
+
+            min-height: 320px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+        }
+
+        .text-side {
+
+            font-size: 0.95rem;
+
+            line-height: 1.6;
+
+            text-align: left;
+
+            margin-bottom: 20px;
+
+        }
+
+        .text-side p {
+
+            opacity: 0;
+
+            transform: translateY(15px);
+
+            transition: all 1.2s ease;
+
+            margin: 0 0 12px 0;
+
+        }
+
+        .text-side p.visible {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+        .tree-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 110px;
+
+            margin-top: 10px;
+
+        }
+
+        .tree-visual {
+
+            font-size: 5rem;
+
+            transition: all 0.8s ease;
+
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+
+        }
+
+        .contador-box {
+
+            background-color: #ffffff;
+
+            border-radius: 15px;
+
+            padding: 15px;
+
+            box-shadow: 0 4px 12px rgba(184, 74, 98, 0.05);
+
+            border-left: 4px solid #b84a62;
+
+            text-align: left;
+
+            font-size: 0.9rem;
+
+            width: 100%;
+
+            margin-top: 10px;
+
+        }
+
+        .contador-titulo {
+
+            font-weight: 600;
+
+            color: #8c6d62;
+
+            margin-bottom: 5px;
+
+            font-size: 0.85rem;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+        }
+
+        .destaque {
+
+            font-weight: 600;
+
+            color: #b84a62;
+
+            font-size: 1.05rem;
+
+        }
+
+        .flowers-footer {
+
+            margin-top: auto;
+
+            font-size: 1.5rem;
+
+            padding: 15px 0;
+
+            letter-spacing: 6px;
+
+            color: #e8a7b5;
+
+        }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Te amo, Beatriz</h1>
+<div class="content-wrapper">
+<div class="text-side">
+<p id="p1"><b>Beatriz Saraiva, amor da minha vida,</b> nestes cinco meses ao seu lado eu descobri o que é ser verdadeiramente feliz.</p>
+<p id="p2">Espero de todo o coração que você também tenha vivido um dos momentos mais bonitos da sua existência comigo, como eu tenho vivido com você todos os dias.</p>
+<p id="p3">Quero continuar sendo o homem que te cuida, te respeita e te ama com todo o carinho do mundo, porque você merece o melhor que eu puder te dar, hoje e sempre.</p>
+<p id="p4" style="text-align: right; font-family: 'Caveat', cursive; font-size: 1.8rem; color: #b84a62; margin-top: 15px;">De Elian Azevedo ❤️</p>
+</div>
+<div class="tree-container">
+<div class="tree-visual" id="tree">🌱</div>
+</div>
+</div>
+<div class="contador-box">
+<div class="contador-titulo">Nosso tempo juntos:</div>
+<div id="contador">Calculando momentos...</div>
+</div>
+<div class="flowers-footer">🌸💕🌷💕🌸</div>
+</div>
+<script>
+
+        // Data de início calculada para marcar os 5 meses exatos hoje
+
+        const DATA_INICIAL = new Date(2025, 11, 19, 0, 0, 0); 
+
+        function atualizarContador() {
+
+            const agora = new Date();
+
+            const diferencaItem = agora - DATA_INICIAL;
+
+            const segundosTotais = Math.floor(diferencaItem / 1000);
+
+            const minutosTotais = Math.floor(segundosTotais / 60);
+
+            const horasTotais = Math.floor(minutosTotais / 60);
+
+            const diasTotais = Math.floor(horasTotais / 24);
+
+            // Cálculos para exibição contínua
+
+            const meses = 5; 
+
+            const dias = diasTotais % 30; 
+
+            const horas = horasTotais % 24;
+
+            const minutos = minutosTotais % 60;
+
+            const segundos = segundosTotais % 60;
+
+            document.getElementById('contador').innerHTML = `
+<span class="destaque">${meses}</span> meses 
+<span class="destaque">${dias}</span> dias 
+<span class="destaque">${horas}</span> horas 
+<span class="destaque">${minutos}</span> minutos 
+<span class="destaque">${segundos}</span> segundos
+
+            `;
+
+            // Lógica para revelar o seu texto aos poucos conforme os segundos passam (Loop elegante de animação)
+
+            const estagio = segundos % 24;
+
+            const tree = document.getElementById('tree');
+
+            const p1 = document.getElementById('p1');
+
+            const p2 = document.getElementById('p2');
+
+            const p3 = document.getElementById('p3');
+
+            const p4 = document.getElementById('p4');
+
+            if (estagio < 4) {
+
+                tree.innerHTML = "🌱";
+
+                p1.classList.remove('visible');
+
+                p2.classList.remove('visible');
+
+                p3.classList.remove('visible');
+
+                p4.classList.remove('visible');
+
+            } else if (estagio < 9) {
+
+                tree.innerHTML = "🌿";
+
+                p1.classList.add('visible');
+
+            } else if (estagio < 14) {
+
+                tree.innerHTML = "🌸";
+
+                p2.classList.add('visible');
+
+            } else if (estagio < 19) {
+
+                tree.innerHTML = "🌳";
+
+                p3.classList.add('visible');
+
+            } else {
+
+                tree.innerHTML = "💖";
+
+                p4.classList.add('visible');
+
+            }
+
+        }
+
+        setInterval(atualizarContador, 1000);
+
+        atualizarContador();
+</script>
+</body>
+</html>
+ 
