@@ -5,221 +5,165 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para o Amor da Minha Vida</title>
 <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;600&display=swap');
-
-        * {
-
-            box-sizing: border-box;
-
-        }
-
-        body {
-
-            margin: 0;
-
-            padding: 20px;
-
-            background-color: #fdf5f5;
-
-            font-family: 'Montserrat', sans-serif;
-
-            color: #5a3e36;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            min-height: 100vh;
-
-        }
-
-        .container {
-
-            max-width: 400px;
-
-            width: 100%;
-
-            text-align: center;
-
-            display: flex;
-
-            flex-direction: column;
-
-            height: 100%;
-
-        }
-
-        h1 {
-
-            font-family: 'Caveat', cursive;
-
-            color: #b84a62;
-
-            font-size: 3.2rem;
-
-            margin: 10px 0 5px 0;
-
-            line-height: 1.2;
-
-        }
-
-        .content-wrapper {
-
-            background-color: #ffffff;
-
-            border-radius: 20px;
-
-            padding: 20px;
-
-            box-shadow: 0 8px 24px rgba(184, 74, 98, 0.1);
-
-            margin: 15px 0;
-
-            min-height: 320px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-        }
-
-        .text-side {
-
-            font-size: 0.95rem;
-
-            line-height: 1.6;
-
-            text-align: left;
-
-            margin-bottom: 20px;
-
-        }
-
-        .text-side p {
-
-            opacity: 0;
-
-            transform: translateY(15px);
-
-            transition: all 1.2s ease;
-
-            margin: 0 0 12px 0;
-
-        }
-
-        .text-side p.visible {
-
-            opacity: 1;
-
-            transform: translateY(0);
-
-        }
-
-        .tree-container {
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            height: 110px;
-
-            margin-top: 10px;
-
-        }
-
-        .tree-visual {
-
-            font-size: 5rem;
-
-            transition: all 0.8s ease;
-
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
-
-        }
-
-        .contador-box {
-
-            background-color: #ffffff;
-
-            border-radius: 15px;
-
-            padding: 15px;
-
-            box-shadow: 0 4px 12px rgba(184, 74, 98, 0.05);
-
-            border-left: 4px solid #b84a62;
-
-            text-align: left;
-
-            font-size: 0.9rem;
-
-            width: 100%;
-
-            margin-top: 10px;
-
-        }
-
-        .contador-titulo {
-
-            font-weight: 600;
-
-            color: #8c6d62;
-
-            margin-bottom: 5px;
-
-            font-size: 0.85rem;
-
-            letter-spacing: 1px;
-
-            text-transform: uppercase;
-
-        }
-
-        .destaque {
-
-            font-weight: 600;
-
-            color: #b84a62;
-
-            font-size: 1.05rem;
-
-        }
-
-        .flowers-footer {
-
-            margin-top: auto;
-
-            font-size: 1.5rem;
-
-            padding: 15px 0;
-
-            letter-spacing: 6px;
-
-            color: #e8a7b5;
-
-        }
+       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;600&display=swap');
+       * {
+           box-sizing: border-box;
+       }
+       body {
+           margin: 0;
+           padding: 15px;
+           background-color: #fdf5f5;
+           font-family: 'Montserrat', sans-serif;
+           color: #5a3e36;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           min-height: 100vh;
+       }
+       .container {
+           max-width: 420px;
+           width: 100%;
+           text-align: center;
+           display: flex;
+           flex-direction: column;
+       }
+       h1 {
+           font-family: 'Caveat', cursive;
+           color: #b84a62;
+           font-size: 3rem;
+           margin: 5px 0;
+           line-height: 1.1;
+       }
+       .content-wrapper {
+           background-color: #ffffff;
+           border-radius: 20px;
+           padding: 20px;
+           box-shadow: 0 8px 24px rgba(184, 74, 98, 0.1);
+           margin: 10px 0;
+           min-height: 380px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+       }
+       .text-side {
+           font-size: 0.9rem;
+           line-height: 1.5;
+           text-align: left;
+       }
+       .text-side p {
+           opacity: 0;
+           transform: translateY(15px);
+           transition: all 1s ease;
+           margin: 0 0 12px 0;
+           display: none;
+       }
+       .text-side p.visible {
+           opacity: 1;
+           transform: translateY(0);
+           display: block;
+       }
+       .tree-container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 80px;
+           margin-top: 5px;
+       }
+       .tree-visual {
+           font-size: 4rem;
+           transition: all 0.8s ease;
+           filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+       }
+       /* --- ESTILO DO SLIDE DE FOTOS --- */
+       .carrossel-container {
+           width: 100%;
+           height: 300px; /* Aumentei um pouco o tamanho para as fotos brilharem mais */
+           margin: 15px 0;
+           border-radius: 15px;
+           overflow: hidden;
+           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+           position: relative;
+       }
+       .carrossel-foto {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           position: absolute;
+           top: 0;
+           left: 0;
+           opacity: 0;
+           transition: opacity 1s ease-in-out;
+       }
+       .carrossel-foto.ativa {
+           opacity: 1;
+       }
+       .contador-box {
+           background-color: #ffffff;
+           border-radius: 15px;
+           padding: 12px;
+           box-shadow: 0 4px 12px rgba(184, 74, 98, 0.05);
+           border-left: 4px solid #b84a62;
+           text-align: left;
+           font-size: 0.85rem;
+           width: 100%;
+           margin-top: 5px;
+       }
+       .contador-titulo {
+           font-weight: 600;
+           color: #8c6d62;
+           margin-bottom: 3px;
+           font-size: 0.8rem;
+           letter-spacing: 1px;
+           text-transform: uppercase;
+       }
+       .destaque {
+           font-weight: 600;
+           color: #b84a62;
+           font-size: 1rem;
+       }
+       .flowers-footer {
+           margin-top: auto;
+           font-size: 1.3rem;
+           padding: 10px 0;
+           letter-spacing: 6px;
+           color: #e8a7b5;
+       }
 </style>
 </head>
 <body>
 <div class="container">
-<h1>Te amo, Beatriz</h1>
+<h1>Para a Minha Beatriz</h1>
 <div class="content-wrapper">
 <div class="text-side">
-<p id="p1"><b>Beatriz Saraiva, amor da minha vida,</b> nestes cinco meses ao seu lado eu descobri o que é ser verdadeiramente feliz.</p>
-<p id="p2">Espero de todo o coração que você também tenha vivido um dos momentos mais bonitos da sua existência comigo, como eu tenho vivido com você todos os dias.</p>
-<p id="p3">Quero continuar sendo o homem que te cuida, te respeita e te ama com todo o carinho do mundo, porque você merece o melhor que eu puder te dar, hoje e sempre.</p>
-<p id="p4" style="text-align: right; font-family: 'Caveat', cursive; font-size: 1.8rem; color: #b84a62; margin-top: 15px;">De Elian Azevedo ❤️</p>
+<div id="bloco1">
+<p class="txt"><b>Beatriz Saraiva, amor da minha vida,</b> nestes cinco meses ao teu lado descobri o que é ser verdadeiramente feliz. Acordo todos os dias a agradecer por teres aparecido na minha vida.</p>
+<p class="txt">Espero de todo o coração que tu também tenhas vivido um dos períodos mais bonitos da tua existência comigo, tal como eu tenho vivido contigo todos os dias.</p>
+<p class="txt">Quero continuar a ser o homem que te cuida, te respeita e te ama com todo o carinho do mundo, porque tu mereces o melhor que eu puder te dar, hoje e sempre.</p>
+</div>
+<div id="bloco2">
+<p class="txt">E sabes, minha nengue… 😂</p>
+<p class="txt">Ainda me rio quando lembro da tua cara quando descobriram o pacote de camisinha no lixo. Nós a tentar ter coragem pra falar com a minha mãe e pedir desculpas.</p>
+<p class="txt">Ou quando fiquei com o queixo todo manchado de sangue e tu a gozares comigo enquanto tentavas limpar. São estes momentos parvos que eu mais gosto, vida. Porque contigo até as trapalhadas ficam engraçadas.</p>
+</div>
+<div id="bloco3">
+<p class="txt">És a minha nengue, a minha beta, a mulher que me faz rir, que me faz sentir em casa e que me deixa completamente apaixonado todos os dias.</p>
+<p class="txt">Quero continuar a viver estas loucuras todas contigo, os risos, os beijos e as vergonhas. Amo-te com todo o meu coração, hoje, amanhã e sempre.</p>
+</div>
+<p id="p_assinatura" style="text-align: right; font-family: 'Caveat', cursive; font-size: 1.8rem; color: #b84a62; margin-top: 10px;">Do teu Elian Azevedo ❤️</p>
 </div>
 <div class="tree-container">
 <div class="tree-visual" id="tree">🌱</div>
 </div>
+</div>
+<div class="carrossel-container">
+<img src="foto1.jpg" class="carrossel-foto ativa" alt="Foto 1">
+<img src="foto2.jpg" class="carrossel-foto" alt="Foto 2">
+<img src="foto3.jpg" class="carrossel-foto" alt="Foto 3">
+<img src="foto4.jpg" class="carrossel-foto" alt="Foto 4">
+<img src="foto5.jpg" class="carrossel-foto" alt="Foto 5">
+<img src="foto6.jpg" class="carrossel-foto" alt="Foto 6">
+<img src="foto7.jpg" class="carrossel-foto" alt="Foto 7">
+<img src="foto8.jpg" class="carrossel-foto" alt="Foto 8">
 </div>
 <div class="contador-box">
 <div class="contador-titulo">Nosso tempo juntos:</div>
@@ -228,103 +172,80 @@
 <div class="flowers-footer">🌸💕🌷💕🌸</div>
 </div>
 <script>
-
-        // Data de início calculada para marcar os 5 meses exatos hoje
-
-        const DATA_INICIAL = new Date(2025, 11, 19, 0, 0, 0); 
-
-        function atualizarContador() {
-
-            const agora = new Date();
-
-            const diferencaItem = agora - DATA_INICIAL;
-
-            const segundosTotais = Math.floor(diferencaItem / 1000);
-
-            const minutosTotais = Math.floor(segundosTotais / 60);
-
-            const horasTotais = Math.floor(minutosTotais / 60);
-
-            const diasTotais = Math.floor(horasTotais / 24);
-
-            // Cálculos para exibição contínua
-
-            const meses = 5; 
-
-            const dias = diasTotais % 30; 
-
-            const horas = horasTotais % 24;
-
-            const minutos = minutosTotais % 60;
-
-            const segundos = segundosTotais % 60;
-
-            document.getElementById('contador').innerHTML = `
-<span class="destaque">${meses}</span> meses 
-<span class="destaque">${dias}</span> dias 
-<span class="destaque">${horas}</span> horas 
-<span class="destaque">${minutos}</span> minutos 
+       // DATA EM QUE COMEÇARAM A CONVERSAR: 28 de Janeiro de 2026
+       const DATA_INICIAL = new Date(2026, 0, 28, 0, 0, 0);
+       function atualizarContador() {
+           const agora = new Date();
+           const diferencaItem = agora - DATA_INICIAL;
+           const segundosTotais = Math.floor(diferencaItem / 1000);
+           const minutosTotais = Math.floor(segundosTotais / 60);
+           const horasTotais = Math.floor(minutosTotais / 60);
+           const diasTotais = Math.floor(horasTotais / 24);
+           const meses = Math.floor(diasTotais / 30.44);
+           const dias = Math.floor(diasTotais % 30.44);
+           const horas = horasTotais % 24;
+           const minutos = minutosTotais % 60;
+           const segundos = segundosTotais % 60;
+           document.getElementById('contador').innerHTML = `
+<span class="destaque">${meses}</span> meses
+<span class="destaque">${dias}</span> dias
+<span class="destaque">${horas}</span> horas
+<span class="destaque">${minutos}</span> minutos
 <span class="destaque">${segundos}</span> segundos
-
-            `;
-
-            // Lógica para revelar o seu texto aos poucos conforme os segundos passam (Loop elegante de animação)
-
-            const estagio = segundos % 24;
-
-            const tree = document.getElementById('tree');
-
-            const p1 = document.getElementById('p1');
-
-            const p2 = document.getElementById('p2');
-
-            const p3 = document.getElementById('p3');
-
-            const p4 = document.getElementById('p4');
-
-            if (estagio < 4) {
-
-                tree.innerHTML = "🌱";
-
-                p1.classList.remove('visible');
-
-                p2.classList.remove('visible');
-
-                p3.classList.remove('visible');
-
-                p4.classList.remove('visible');
-
-            } else if (estagio < 9) {
-
-                tree.innerHTML = "🌿";
-
-                p1.classList.add('visible');
-
-            } else if (estagio < 14) {
-
-                tree.innerHTML = "🌸";
-
-                p2.classList.add('visible');
-
-            } else if (estagio < 19) {
-
-                tree.innerHTML = "🌳";
-
-                p3.classList.add('visible');
-
-            } else {
-
-                tree.innerHTML = "💖";
-
-                p4.classList.add('visible');
-
-            }
-
-        }
-
-        setInterval(atualizarContador, 1000);
-
-        atualizarContador();
+           `;
+           // Animação do texto e da árvore (Ciclo de 32 segundos)
+           const estagio = segundos % 32;
+           const tree = document.getElementById('tree');
+           const b1 = document.getElementById('bloco1').getElementsByClassName('txt');
+           const b2 = document.getElementById('bloco2').getElementsByClassName('txt');
+           const b3 = document.getElementById('bloco3').getElementsByClassName('txt');
+           const assinatura = document.getElementById('p_assinatura');
+           function alternarBloco(bloco, mostrar) {
+               for(let i=0; i<bloco.length; i++) {
+                   if(mostrar) {
+                       bloco[i].classList.add('visible');
+                   } else {
+                       bloco[i].classList.remove('visible');
+                   }
+               }
+           }
+           if (estagio < 8) {
+               tree.innerHTML = "🌱";
+               alternarBloco(b1, true);
+               alternarBloco(b2, false);
+               alternarBloco(b3, false);
+               assinatura.classList.remove('visible');
+           } else if (estagio < 16) {
+               tree.innerHTML = "🌿";
+               alternarBloco(b1, false);
+               alternarBloco(b2, true);
+               alternarBloco(b3, false);
+               assinatura.classList.remove('visible');
+           } else if (estagio < 24) {
+               tree.innerHTML = "🌸";
+               alternarBloco(b1, false);
+               alternarBloco(b2, false);
+               alternarBloco(b3, true);
+               assinatura.classList.remove('visible');
+           } else {
+               tree.innerHTML = "💖🌳";
+               alternarBloco(b1, false);
+               alternarBloco(b2, false);
+               alternarBloco(b3, true);
+               assinatura.classList.add('visible');
+           }
+       }
+       // LÓGICA DO CARROSSEL DE FOTOS
+       let fotoIndex = 0;
+       const fotos = document.querySelectorAll('.carrossel-foto');
+       function trocarFotos() {
+           fotos[fotoIndex].classList.remove('ativa');
+           fotoIndex = (fotoIndex + 1) % fotos.length;
+           fotos[fotoIndex].classList.add('ativa');
+       }
+       setInterval(trocarFotos, 3000); // Muda de foto a cada 3 segundos
+       setInterval(atualizarContador, 1000);
+       atualizarContador();
 </script>
 </body>
 </html>
